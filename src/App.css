@@ -196,6 +196,21 @@
 }
 .hint-erase { color: #92400e; }
 
+/* ── Footer ─────────────────────────────────────────────────────────────────── */
+.footer {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+.footer a {
+  color: #64748b;
+  text-decoration: none;
+}
+.footer a:hover {
+  color: #166534;
+  text-decoration: underline;
+}
+
 /* ── Modal ───────────────────────────────────────────────────────────────────── */
 .modal-backdrop {
   position: fixed;

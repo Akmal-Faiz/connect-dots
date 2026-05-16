@@ -247,6 +247,13 @@ export default function App() {
         <p className="hint hint-erase">Click any line to erase it. Press the button again to go back to drawing.</p>
       )}
 
+      {/* ── Footer ── */}
+      <footer className="footer">
+        <a href="https://github.com/Akmal-Faiz/connect-dots" target="_blank" rel="noreferrer">
+          View on GitHub
+        </a>
+      </footer>
+
       {/* ── Modal ── */}
       {modal && (
         <div className="modal-backdrop" onClick={() => setModal(null)}>
