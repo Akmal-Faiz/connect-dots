@@ -27,7 +27,7 @@ const BINS = [
 
 const RIGHT_ITEMS = [
   { id: 'r0' as NodeId, label: 'Glass Jars',      emoji: '🫙' },
-  { id: 'r1' as NodeId, label: 'Paper Bag',       emoji: '🛍️' },
+  { id: 'r1' as NodeId, label: 'Plastic Bag',      emoji: '🛍️' },
   { id: 'r2' as NodeId, label: 'Phone & Mouse',   emoji: '📱' },
   { id: 'r3' as NodeId, label: 'Newspapers',  emoji: '📰' },
 ]
@@ -39,7 +39,7 @@ const CORRECT: Connection[] = [
   { from: 'l2', to: 'bl3' }, // Milk Carton → Paper
   { from: 'l3', to: 'bl2' }, // Plastic Cup → Plastic
   { from: 'r0', to: 'br1' }, // Glass Jars → Glass
-  { from: 'r1', to: 'br2' }, // Paper Bag (plastic) → Plastic
+  { from: 'r1', to: 'br2' }, // Plastic Bag → Plastic
   { from: 'r2', to: 'br0' }, // Phone & Mouse → E-waste
   { from: 'r3', to: 'br3' }, // Newspapers → Paper
 ]
