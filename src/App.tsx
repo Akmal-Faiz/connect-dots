@@ -12,10 +12,10 @@ interface Connection { from: NodeId; to: NodeId }
 
 // ── Puzzle data ───────────────────────────────────────────────────────────────
 const LEFT_ITEMS = [
-  { id: 'l0' as NodeId, label: 'Batteries',    emoji: '🔋' },
-  { id: 'l1' as NodeId, label: 'Glass Bottle', emoji: '🍾' },
-  { id: 'l2' as NodeId, label: 'Juice Box',  emoji: '🧃' },
-  { id: 'l3' as NodeId, label: 'Plastic Cup',  emoji: '🥤' },
+  { id: 'l0' as NodeId, label: 'Batteries',    img: '/connect-dots/images/batteries.svg' },
+  { id: 'l1' as NodeId, label: 'Glass Bottle', img: '/connect-dots/images/glass-bottle.png' },
+  { id: 'l2' as NodeId, label: 'Juice Box',    img: '/connect-dots/images/juice-box.svg' },
+  { id: 'l3' as NodeId, label: 'Plastic Cup',  img: '/connect-dots/images/plastic-cup.svg' },
 ]
 
 const BINS = [
@@ -26,10 +26,10 @@ const BINS = [
 ]
 
 const RIGHT_ITEMS = [
-  { id: 'r0' as NodeId, label: 'Glass Jars',      emoji: '🫙' },
-  { id: 'r1' as NodeId, label: 'Paper Bag',       emoji: '🛍️' },
-  { id: 'r2' as NodeId, label: 'Phone & Mouse',   emoji: '📱' },
-  { id: 'r3' as NodeId, label: 'Newspapers',  emoji: '📰' },
+  { id: 'r0' as NodeId, label: 'Glass Jars',    img: '/connect-dots/images/glass-jar.png' },
+  { id: 'r1' as NodeId, label: 'Paper Bag',     img: '/connect-dots/images/paper-bag.svg' },
+  { id: 'r2' as NodeId, label: 'Phone & Mouse', img: '/connect-dots/images/phone.svg' },
+  { id: 'r3' as NodeId, label: 'Newspapers',    img: '/connect-dots/images/newspapers.svg' },
 ]
 
 // Correct: each item → its bin dot
@@ -158,7 +158,7 @@ export default function App() {
           <div key={item.id} className="item item-left"
             style={{ top: `${ROWS[i]}%`, left: '2%' }}>
             <div className="item-card">
-              <span className="item-emoji">{item.emoji}</span>
+              <img className="item-img" src={item.img} alt={item.label} />
               <span className="item-label">{item.label}</span>
             </div>
           </div>
@@ -221,7 +221,7 @@ export default function App() {
           <div key={item.id} className="item item-right"
             style={{ top: `${ROWS[i]}%`, right: '2%' }}>
             <div className="item-card item-card-right">
-              <span className="item-emoji">{item.emoji}</span>
+              <img className="item-img" src={item.img} alt={item.label} />
               <span className="item-label">{item.label}</span>
             </div>
           </div>
